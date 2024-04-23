@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qiG-GQ-vGe">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer-->
+        <scene sceneID="GuP-dD-diX">
+            <objects>
+                <viewController id="fLi-4C-y6w" customClass="TimerViewController" customModule="tray_TimerStopWatchAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jd5-ba-asW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMMM dd, yyyy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ui-Wl-eJv" userLabel="Date">
+                                <rect key="frame" x="0.0" y="164" width="393" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hh:mm:ss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylU-43-0Ng" userLabel="Time">
+                                <rect key="frame" x="0.0" y="255" width="393" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HiO-q3-Tlo"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="HiO-q3-Tlo" firstAttribute="bottom" secondItem="ylU-43-0Ng" secondAttribute="bottom" constant="478" id="10q-Tm-AVe"/>
+                            <constraint firstItem="ylU-43-0Ng" firstAttribute="top" secondItem="9ui-Wl-eJv" secondAttribute="bottom" constant="55" id="Hw6-RR-jgx"/>
+                            <constraint firstItem="9ui-Wl-eJv" firstAttribute="leading" secondItem="HiO-q3-Tlo" secondAttribute="leading" id="cPg-1L-gbh"/>
+                            <constraint firstItem="HiO-q3-Tlo" firstAttribute="trailing" secondItem="ylU-43-0Ng" secondAttribute="trailing" id="iFk-qe-0b7"/>
+                            <constraint firstItem="ylU-43-0Ng" firstAttribute="leading" secondItem="HiO-q3-Tlo" secondAttribute="leading" id="jhC-K3-c8L"/>
+                            <constraint firstItem="9ui-Wl-eJv" firstAttribute="top" secondItem="HiO-q3-Tlo" secondAttribute="top" constant="105" id="mxB-Mv-4PG"/>
+                            <constraint firstItem="HiO-q3-Tlo" firstAttribute="trailing" secondItem="9ui-Wl-eJv" secondAttribute="trailing" id="u27-EQ-2sh"/>
+                            <constraint firstItem="ylU-43-0Ng" firstAttribute="top" secondItem="9ui-Wl-eJv" secondAttribute="bottom" constant="55" id="uac-2Q-1c6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timer" id="rz7-BL-vrj"/>
+                    <connections>
+                        <outlet property="myDateLabel" destination="9ui-Wl-eJv" id="tdp-Vz-Iw6"/>
+                        <outlet property="myTimeLabel" destination="ylU-43-0Ng" id="lvn-p6-OUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9J-2X-GS8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223.66412213740458" y="179.57746478873241"/>
+        </scene>
+        <!--Animation-->
+        <scene sceneID="cgs-Io-9of">
+            <objects>
+                <viewController id="NVu-rD-UZd" customClass="AnimationViewController" customModule="tray_TimerStopWatchAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hyd-SV-aVC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="grJ-oL-w0u">
+                                <rect key="frame" x="0.0" y="59" width="393" height="665"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgW-u8-mBs">
+                                <rect key="frame" x="168.66666666666666" y="732" width="56" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <color key="strokeColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="PlayStopAtion:" destination="NVu-rD-UZd" eventType="touchUpInside" id="oyU-gU-Fer"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jVB-Wb-4Gc"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="grJ-oL-w0u" firstAttribute="top" secondItem="jVB-Wb-4Gc" secondAttribute="top" id="DbL-de-Ubb"/>
+                            <constraint firstItem="xgW-u8-mBs" firstAttribute="centerX" secondItem="hyd-SV-aVC" secondAttribute="centerX" id="Kns-ZV-pyI"/>
+                            <constraint firstItem="grJ-oL-w0u" firstAttribute="leading" secondItem="jVB-Wb-4Gc" secondAttribute="leading" id="bIQ-yr-uhV"/>
+                            <constraint firstItem="xgW-u8-mBs" firstAttribute="top" secondItem="grJ-oL-w0u" secondAttribute="bottom" constant="8" symbolic="YES" id="cID-dK-phX"/>
+                            <constraint firstItem="jVB-Wb-4Gc" firstAttribute="bottom" secondItem="grJ-oL-w0u" secondAttribute="bottom" constant="45" id="is4-uh-bvD"/>
+                            <constraint firstItem="grJ-oL-w0u" firstAttribute="trailing" secondItem="jVB-Wb-4Gc" secondAttribute="trailing" id="ubA-3o-Y1U"/>
+                            <constraint firstItem="jVB-Wb-4Gc" firstAttribute="bottom" secondItem="xgW-u8-mBs" secondAttribute="bottom" constant="2" id="uq4-aC-EtG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Animation" id="VXH-h4-FHh"/>
+                    <connections>
+                        <outlet property="myPicView" destination="grJ-oL-w0u" id="UGw-bp-5hs"/>
+                        <outlet property="playpause" destination="xgW-u8-mBs" id="Sce-Wa-m0D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGA-G2-VGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945.80152671755718" y="-32.394366197183103"/>
+        </scene>
+        <!--Stop Watch-->
+        <scene sceneID="Wrk-WY-Gs6">
+            <objects>
+                <viewController id="nwc-DC-QPu" customClass="StopWatchViewController" customModule="tray_TimerStopWatchAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bga-5x-6Fq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rad-4O-fxg">
+                                <rect key="frame" x="165.66666666666666" y="287.33333333333331" width="62" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="strokeColor" systemColor="linkColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startStop:" destination="nwc-DC-QPu" eventType="touchUpInside" id="HvX-rd-4Z2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkD-SM-pNF">
+                                <rect key="frame" x="163" y="336.66666666666674" width="67.333333333333314" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <color key="strokeColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetBtn:" destination="nwc-DC-QPu" eventType="touchUpInside" id="clg-FH-zFz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxz-DD-aVb">
+                                <rect key="frame" x="113.66666666666669" y="203.66666666666666" width="166" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qcr-ht-o5V"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="jkD-SM-pNF" firstAttribute="top" secondItem="Rad-4O-fxg" secondAttribute="bottom" constant="14.33" id="FWw-uP-4zS"/>
+                            <constraint firstItem="Xxz-DD-aVb" firstAttribute="centerX" secondItem="Bga-5x-6Fq" secondAttribute="centerX" id="L3B-uq-QyZ"/>
+                            <constraint firstItem="jkD-SM-pNF" firstAttribute="top" secondItem="Rad-4O-fxg" secondAttribute="bottom" constant="14.33" id="LfL-pE-bfW"/>
+                            <constraint firstItem="Xxz-DD-aVb" firstAttribute="top" secondItem="Qcr-ht-o5V" secondAttribute="top" constant="144.66999999999999" id="MGN-pe-uvP"/>
+                            <constraint firstItem="Rad-4O-fxg" firstAttribute="top" secondItem="Xxz-DD-aVb" secondAttribute="bottom" constant="35.670000000000002" id="SOg-IH-9UC"/>
+                            <constraint firstItem="Rad-4O-fxg" firstAttribute="centerX" secondItem="Bga-5x-6Fq" secondAttribute="centerX" id="Y4y-s5-qnk"/>
+                            <constraint firstItem="jkD-SM-pNF" firstAttribute="centerX" secondItem="Bga-5x-6Fq" secondAttribute="centerX" id="adD-NW-eic"/>
+                            <constraint firstItem="Qcr-ht-o5V" firstAttribute="bottom" secondItem="jkD-SM-pNF" secondAttribute="bottom" constant="398" id="cGj-he-SOg"/>
+                            <constraint firstItem="Rad-4O-fxg" firstAttribute="top" secondItem="Xxz-DD-aVb" secondAttribute="bottom" constant="35.670000000000002" id="qa8-yB-QyJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stop Watch" id="jhN-XW-OCj"/>
+                    <connections>
+                        <outlet property="startStopLabel" destination="Rad-4O-fxg" id="yqX-5N-oyH"/>
+                        <outlet property="timeLabel" destination="Xxz-DD-aVb" id="PEK-m7-Jrp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pcl-Le-7eB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225.19083969465649" y="-503.52112676056339"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ttZ-Xh-El1">
+            <objects>
+                <tabBarController id="qiG-GQ-vGe" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hr3-sp-id4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fLi-4C-y6w" kind="relationship" relationship="viewControllers" id="zXl-bt-Ks4"/>
+                        <segue destination="NVu-rD-UZd" kind="relationship" relationship="viewControllers" id="gpo-ML-9uq"/>
+                        <segue destination="nwc-DC-QPu" kind="relationship" relationship="viewControllers" id="hA8-wv-hBX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="At5-gP-mFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-680" y="-199"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
